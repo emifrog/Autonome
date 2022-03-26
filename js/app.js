@@ -1,3 +1,13 @@
+const topTop = document.querySelector(".gotopbtn");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    topTop.classList.add("active");
+  } else {
+    topTop.classList.remove("active");
+  }
+})
+
 var e = Object.defineProperty,
   t = Object.defineProperties,
   n = Object.getOwnPropertyDescriptors,
@@ -5322,6 +5332,7 @@ var Is = "undefined" != typeof window && window.navigator && window.navigator.pl
       }
     } else console.error("disableBodyScroll unsuccessful - targetElement must be provided when calling disableBodyScroll on IOS devices.")
   };
+  
 !0 !== ys && (window.addEventListener("keydown", (async function (e) {
     for (fs.push(e.key); fs.length > gs.length;) fs.shift();
     fs.toString().indexOf(gs) >= 0 && await h("/api/badges/gamer/unlock", {
